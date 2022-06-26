@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mangopay_pay_ins",
+  "info": {
+    "singularName": "mangopay-pay-in",
+    "pluralName": "mangopay-pay-ins",
+    "displayName": "mangopay_pay_in",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pay_in_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "total": {
+      "type": "biginteger"
+    },
+    "fees": {
+      "type": "biginteger"
+    },
+    "professional_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::person.person",
+      "inversedBy": "mangopay_pay_ins"
+    },
+    "the_order_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::order.order",
+      "inversedBy": "mangopay_pay_ins"
+    }
+  }
+}

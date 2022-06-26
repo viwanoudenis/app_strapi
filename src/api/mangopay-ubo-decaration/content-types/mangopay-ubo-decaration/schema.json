@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mangopay_ubo_decarations",
+  "info": {
+    "singularName": "mangopay-ubo-decaration",
+    "pluralName": "mangopay-ubo-decarations",
+    "displayName": "mangopay_ubo_decaration"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ubo_declaration_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "verified": {
+      "type": "boolean"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "mangopay_ubo_decarations"
+    },
+    "professional_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::person.person",
+      "inversedBy": "mangopay_ubo_decarations"
+    }
+  }
+}

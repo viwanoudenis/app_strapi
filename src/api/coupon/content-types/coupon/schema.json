@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coupons",
+  "info": {
+    "singularName": "coupon",
+    "pluralName": "coupons",
+    "displayName": "coupon"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lecode": {
+      "type": "string"
+    },
+    "typecoupon": {
+      "type": "string"
+    },
+    "valeurpourcentage": {
+      "type": "biginteger"
+    },
+    "exigencemin": {
+      "type": "string"
+    },
+    "eligibiliteclient": {
+      "type": "string"
+    },
+    "limiteutilisation": {
+      "type": "string"
+    },
+    "datedebut": {
+      "type": "datetime"
+    },
+    "datefin": {
+      "type": "datetime"
+    },
+    "clienttype": {
+      "type": "string"
+    },
+    "apply": {
+      "type": "string"
+    },
+    "countries": {
+      "type": "string"
+    },
+    "fraienvoi": {
+      "type": "biginteger"
+    },
+    "valeurmontantfixe": {
+      "type": "biginteger"
+    },
+    "fraisexpedition": {
+      "type": "biginteger"
+    },
+    "montantminimun": {
+      "type": "biginteger"
+    },
+    "quantiteminimale": {
+      "type": "integer"
+    },
+    "definedate": {
+      "type": "string"
+    },
+    "limitecodeusebyclient": {
+      "type": "string"
+    },
+    "totalusagelimit": {
+      "type": "integer"
+    },
+    "professionel_id": {
+      "type": "integer"
+    },
+    "statut": {
+      "type": "boolean"
+    }
+  }
+}

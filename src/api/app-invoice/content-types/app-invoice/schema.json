@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "app_invoices",
+  "info": {
+    "singularName": "app-invoice",
+    "pluralName": "app-invoices",
+    "displayName": "app_invoice"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "app_invoice_id": {
+      "type": "string"
+    },
+    "app_invoice_number": {
+      "type": "string"
+    }
+  }
+}

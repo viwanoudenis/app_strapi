@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "links",
+  "info": {
+    "singularName": "link",
+    "pluralName": "links",
+    "displayName": "link"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "obvy_id": {
+      "type": "string"
+    },
+    "payment_url": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "biginteger"
+    }
+  }
+}

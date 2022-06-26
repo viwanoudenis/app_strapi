@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "logos",
+  "info": {
+    "singularName": "logo",
+    "pluralName": "logos",
+    "displayName": "logo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "path": {
+      "type": "string"
+    },
+    "person_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::person.person",
+      "inversedBy": "logo"
+    }
+  }
+}

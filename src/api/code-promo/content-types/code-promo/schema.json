@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "code_promos",
+  "info": {
+    "singularName": "code-promo",
+    "pluralName": "code-promos",
+    "displayName": "code_promo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "codepromo": {
+      "type": "string"
+    },
+    "order_id": {
+      "type": "integer"
+    },
+    "applique": {
+      "type": "boolean"
+    }
+  }
+}

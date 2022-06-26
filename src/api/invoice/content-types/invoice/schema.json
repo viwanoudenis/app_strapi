@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "singularName": "invoice",
+    "pluralName": "invoices",
+    "displayName": "invoice"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "started_at": {
+      "type": "datetime"
+    },
+    "end_at": {
+      "type": "datetime"
+    },
+    "nb_users": {
+      "type": "integer"
+    },
+    "paid": {
+      "type": "boolean"
+    },
+    "value": {
+      "type": "integer"
+    }
+  }
+}

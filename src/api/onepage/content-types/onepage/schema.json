@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "onepages",
+  "info": {
+    "singularName": "onepage",
+    "pluralName": "onepages",
+    "displayName": "onepage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_image": {
+      "type": "string"
+    },
+    "logo_image": {
+      "type": "string"
+    },
+    "primary_color": {
+      "type": "string"
+    },
+    "secondary_color": {
+      "type": "string"
+    },
+    "facebook_link": {
+      "type": "string"
+    },
+    "twitter_link": {
+      "type": "string"
+    },
+    "linkedin_link": {
+      "type": "string"
+    },
+    "instagram_link": {
+      "type": "string"
+    },
+    "about_image": {
+      "type": "string"
+    },
+    "about": {
+      "type": "text"
+    },
+    "hero_title": {
+      "type": "string"
+    },
+    "hero_subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "fees": {
+      "type": "biginteger"
+    },
+    "subdomain": {
+      "type": "string"
+    },
+    "professional_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::person.person",
+      "inversedBy": "onepage"
+    },
+    "onepage_store_config": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::onepage-store-config.onepage-store-config",
+      "inversedBy": "onepage_id"
+    }
+  }
+}

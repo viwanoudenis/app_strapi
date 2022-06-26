@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mangopay_pay_outs",
+  "info": {
+    "singularName": "mangopay-pay-out",
+    "pluralName": "mangopay-pay-outs",
+    "displayName": "mangopay_pay_out"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pay_out_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "total": {
+      "type": "biginteger"
+    },
+    "fees": {
+      "type": "biginteger"
+    },
+    "professional_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::person.person",
+      "inversedBy": "mangopay_pay_outs"
+    }
+  }
+}

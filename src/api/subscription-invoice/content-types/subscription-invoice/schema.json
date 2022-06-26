@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscription_invoices",
+  "info": {
+    "singularName": "subscription-invoice",
+    "pluralName": "subscription-invoices",
+    "displayName": "subscription_invoice"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "end_at": {
+      "type": "datetime"
+    },
+    "start_at": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "biginteger"
+    },
+    "invoice_link": {
+      "type": "string"
+    },
+    "invoice_id": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "subscription_invoices"
+    }
+  }
+}

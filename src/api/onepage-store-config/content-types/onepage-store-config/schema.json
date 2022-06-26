@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "onepage_store_configs",
+  "info": {
+    "singularName": "onepage-store-config",
+    "pluralName": "onepage-store-configs",
+    "displayName": "onepage_store_config"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "city": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "to_take_on_place": {
+      "type": "boolean"
+    },
+    "min_amount_for_order": {
+      "type": "biginteger"
+    },
+    "onepage_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::onepage.onepage",
+      "inversedBy": "onepage_store_config"
+    }
+  }
+}

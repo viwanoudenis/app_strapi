@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mangopay_transfers",
+  "info": {
+    "singularName": "mangopay-transfer",
+    "pluralName": "mangopay-transfers",
+    "displayName": "mangopay_transfer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "transfer_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "total": {
+      "type": "biginteger"
+    },
+    "store_gain": {
+      "type": "biginteger"
+    },
+    "reflexartisan_gain": {
+      "type": "biginteger"
+    },
+    "mangopay_fees": {
+      "type": "biginteger"
+    },
+    "client_fees": {
+      "type": "biginteger"
+    },
+    "total_fees": {
+      "type": "biginteger"
+    },
+    "the_order_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order",
+      "inversedBy": "mangopay_transfer"
+    }
+  }
+}

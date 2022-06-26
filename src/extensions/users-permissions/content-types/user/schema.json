@@ -1,0 +1,144 @@
+{
+  "kind": "collectionType",
+  "collectionName": "up_users",
+  "info": {
+    "name": "user",
+    "description": "",
+    "singularName": "user",
+    "pluralName": "users",
+    "displayName": "User"
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.role",
+      "inversedBy": "users",
+      "configurable": false
+    },
+    "customer_id": {
+      "type": "string"
+    },
+    "payment_method": {
+      "type": "string"
+    },
+    "registered_at": {
+      "type": "datetime"
+    },
+    "last_login": {
+      "type": "datetime"
+    },
+    "invoice_app_id": {
+      "type": "string"
+    },
+    "invoice_app_token": {
+      "type": "string"
+    },
+    "mangopay_reflexartisan_account_id": {
+      "type": "string"
+    },
+    "mangopay_reflexartisan_wallet_id": {
+      "type": "string"
+    },
+    "is_for_admin": {
+      "type": "boolean"
+    },
+    "on_splotlight": {
+      "type": "boolean"
+    },
+    "craftsman_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::person.person",
+      "inversedBy": "user"
+    },
+    "commercial_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::person.person",
+      "inversedBy": "user"
+    },
+    "sponsor_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "subscription_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subscription.subscription",
+      "inversedBy": "users"
+    },
+    "mangopay_kyc_documents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mangopay-kyc-document.mangopay-kyc-document",
+      "mappedBy": "user_id"
+    },
+    "mangopay_ubo_decarations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mangopay-ubo-decaration.mangopay-ubo-decaration",
+      "mappedBy": "user_id"
+    },
+    "subscription_invoices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subscription-invoice.subscription-invoice",
+      "mappedBy": "user_id"
+    },
+    "tokens": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::token.token",
+      "mappedBy": "creator_id"
+    }
+  }
+}

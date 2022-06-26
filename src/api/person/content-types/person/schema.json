@@ -1,0 +1,165 @@
+{
+  "kind": "collectionType",
+  "collectionName": "people",
+  "info": {
+    "singularName": "person",
+    "pluralName": "people",
+    "displayName": "person"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "city_code": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "siret": {
+      "type": "string"
+    },
+    "entreprise_name": {
+      "type": "string"
+    },
+    "person_rank": {
+      "type": "string"
+    },
+    "sponsor": {
+      "type": "string"
+    },
+    "registered_at": {
+      "type": "datetime"
+    },
+    "latitude": {
+      "type": "biginteger"
+    },
+    "longitude": {
+      "type": "biginteger"
+    },
+    "country": {
+      "type": "string"
+    },
+    "tva": {
+      "type": "string"
+    },
+    "category_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "people"
+    },
+    "mangopay_user_id": {
+      "type": "string"
+    },
+    "mangopay_account_created_by_command": {
+      "type": "boolean"
+    },
+    "is_more_than_an_artisan": {
+      "type": "boolean"
+    },
+    "is_verified": {
+      "type": "boolean"
+    },
+    "with_tax": {
+      "type": "boolean"
+    },
+    "deliveries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::delivery.delivery",
+      "mappedBy": "person_id"
+    },
+    "images": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::image.image",
+      "mappedBy": "person_id"
+    },
+    "kbi": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::kbi.kbi",
+      "inversedBy": "person_id"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "commercial_id"
+    },
+    "logo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::logo.logo",
+      "inversedBy": "person_id"
+    },
+    "mangopay_kyc_documents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mangopay-kyc-document.mangopay-kyc-document",
+      "mappedBy": "professional_id"
+    },
+    "mangopay_pay_ins": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mangopay-pay-in.mangopay-pay-in",
+      "mappedBy": "professional_id"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "professional_id"
+    },
+    "mangopay_pay_outs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mangopay-pay-out.mangopay-pay-out",
+      "mappedBy": "professional_id"
+    },
+    "mangopay_refunds": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mangopay-refund.mangopay-refund",
+      "mappedBy": "professional_id"
+    },
+    "mangopay_ubo_decarations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mangopay-ubo-decaration.mangopay-ubo-decaration",
+      "mappedBy": "professional_id"
+    },
+    "onepage": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::onepage.onepage",
+      "inversedBy": "professional_id"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "professional_id"
+    },
+    "product_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-category.product-category",
+      "mappedBy": "professional_id"
+    }
+  }
+}

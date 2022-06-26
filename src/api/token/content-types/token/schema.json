@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tokens",
+  "info": {
+    "singularName": "token",
+    "pluralName": "tokens",
+    "displayName": "token"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "target": {
+      "type": "string"
+    },
+    "end_at": {
+      "type": "datetime"
+    },
+    "token": {
+      "type": "string"
+    },
+    "creator_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "tokens"
+    }
+  }
+}

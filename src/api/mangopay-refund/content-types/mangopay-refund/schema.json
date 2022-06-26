@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mangopay_refunds",
+  "info": {
+    "singularName": "mangopay-refund",
+    "pluralName": "mangopay-refunds",
+    "displayName": "mangopay_refund"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "refund_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "debited_funds": {
+      "type": "biginteger"
+    },
+    "credited_funds": {
+      "type": "biginteger"
+    },
+    "fees": {
+      "type": "biginteger"
+    },
+    "refund_type": {
+      "type": "string"
+    },
+    "professional_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::person.person",
+      "inversedBy": "mangopay_refunds"
+    },
+    "the_order_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order",
+      "inversedBy": "mangopay_refund"
+    }
+  }
+}
